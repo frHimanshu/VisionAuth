@@ -1,0 +1,5 @@
+name: WelcomePlugin
+version: 1.0.0
+main: WelcomePlugin\Main
+api: 5.0.0
+author: Himanshu
