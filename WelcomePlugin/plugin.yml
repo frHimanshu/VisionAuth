@@ -1,12 +1,12 @@
 name: WelcomePlugin
 version: 1.0.0
 author: Himanshu
-main: Php\WelcomePlugin\Main
-api: [5.0.0]  # Latest recommended version (replace with your target version if needed)
+main: WelcomePlugin\Main
+api: [5.0.0]
 
 commands:
   welcome:
-    description: Sends a welcome message to the player
+    description: Sends a welcome message
     usage: /welcome
     permission: welcome.command
 
