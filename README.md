@@ -27,7 +27,7 @@ A collection of practical PocketMine-MP plugins to enhance your Minecraft Bedroc
    - Clone the plugin into the `plugins/` directory:
      ```bash
      cd ~/minecraft-server/plugins
-     git clone https://github.com/frHimanshu/php-minecraft-learning-journey.git
+     git clone https://github.com/frHimanshu/minecrafters.git
      ```
 
    - Restart the server:
@@ -47,7 +47,7 @@ A collection of practical PocketMine-MP plugins to enhance your Minecraft Bedroc
 2. **Install the Plugin**:
    - Clone the plugin into the `plugins/` directory:
      ```bash
-     git clone https://github.com/frHimanshu/php-minecraft-learning-journey.git
+     git clone https://github.com/frHimanshu/minecrafters.git
      ```
 
    - Restart the server by running `start.cmd` again.
