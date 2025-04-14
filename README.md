@@ -1,2 +1,1 @@
-**Plugins for day to day life use!
-**
+Plugins for day to day use
