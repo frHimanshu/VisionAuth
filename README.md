@@ -1,7 +1,7 @@
 ## Minecrafters
 A collection of practical PocketMine-MP plugins to enhance your Minecraft Bedrock server experience.
 
-## Installation
+## Installation Guide
 
 ### **For Linux/MacOS**
 
@@ -50,7 +50,7 @@ A collection of practical PocketMine-MP plugins to enhance your Minecraft Bedroc
      git clone https://github.com/frHimanshu/minecrafters.git
      ```
 
-   - Restart the server by running `start.cmd` again.
+   - Restart the server by running `start.cmd` in terminal again.
 
 ---
 
@@ -60,3 +60,6 @@ To modify the welcome message, edit the message in the `Main.php` file:
 
 ```php
 $this->getServer()->getLogger()->info("Welcome to the server, {$player->getName()}!");
+```
+
+### Enjoy the Plugin
