@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VisionAuth - Face Analysis System</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- MediaPipe Face Landmarks -->
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/face_mesh/face_mesh.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+</head>
+<body>
+    <div class="fullscreen-container">
+        <!-- Video Background -->
+        <div class="video-background">
+            <video id="video" autoplay muted playsinline></video>
+            <canvas id="canvas"></canvas>
+        </div>
+
+        <!-- Mode Selection Panel -->
+        <div class="mode-panel" id="modePanel">
+            <h2>VisionAuth Analysis</h2>
+            <p>Choose your analysis mode:</p>
+            
+            <div class="mode-selection">
+                <div class="mode-option" data-mode="performance">
+                    <h3>🚀 High Performance</h3>
+                    <p>Fast analysis, lower accuracy</p>
+                    <div class="mode-features">
+                        <span>⚡ Instant start</span>
+                        <span>📊 Basic analysis</span>
+                        <span>🎯 Quick results</span>
+                    </div>
+                </div>
+                
+                <div class="mode-option" data-mode="accuracy">
+                    <h3>🎯 High Accuracy</h3>
+                    <p>Detailed analysis, slower processing</p>
+                    <div class="mode-features">
+                        <span>🔍 Detailed detection</span>
+                        <span>📈 Advanced analysis</span>
+                        <span>🎨 Rich wireframes</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-selection" id="featureSelection" style="display: none;">
+                <h3>Select Analysis Features:</h3>
+                <div class="feature-toggles">
+                    <label class="feature-toggle">
+                        <input type="radio" name="analysisType" value="emotions" checked>
+                        <span class="toggle-label">😊 Emotion Detection</span>
+                    </label>
+                    <label class="feature-toggle">
+                        <input type="radio" name="analysisType" value="age">
+                        <span class="toggle-label">📅 Age Estimation</span>
+                    </label>
+                </div>
+                <button class="start-analysis-btn" id="startAnalysisBtn">Start Analysis</button>
+            </div>
+        </div>
+
+        <!-- Analysis Box -->
+        <div class="analysis-box" id="analysisBox" style="display: none;">
+            <div class="analysis-header">
+                <h3>Live Analysis</h3>
+                <div class="status-indicator active" id="statusIndicator"></div>
+            </div>
+            <div class="analysis-content">
+                <div class="analysis-item">
+                    <span class="label">Mode:</span>
+                    <span class="value" id="modeValue">--</span>
+                </div>
+                <div class="analysis-item">
+                    <span class="label">Feature:</span>
+                    <span class="value" id="featureValue">--</span>
+                </div>
+                <div class="analysis-item">
+                    <span class="label">Result:</span>
+                    <span class="value" id="resultValue">--</span>
+                </div>
+                <div class="analysis-item">
+                    <span class="label">Confidence:</span>
+                    <span class="value" id="confidenceValue">--</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Control Panel -->
+        <div class="control-panel" id="controlPanel" style="display: none;">
+            <button class="control-btn" id="stopBtn">Stop Analysis</button>
+            <button class="control-btn" id="fullscreenBtn">Fullscreen</button>
+            <button class="control-btn" id="changeModeBtn">Change Mode</button>
+        </div>
+
+        <!-- Loading Overlay -->
+        <div class="loading-overlay hidden" id="loadingOverlay">
+            <div class="loading-content">
+                <div class="spinner"></div>
+                <p>Initializing camera...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
